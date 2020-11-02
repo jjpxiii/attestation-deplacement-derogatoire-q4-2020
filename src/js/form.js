@@ -74,7 +74,7 @@ const createFormGroup = ({
   minlength,
   name, // here the 'key' value
   pattern,
-  placeholder = '',
+  value,
   type = 'text',
 }) => {
   const formGroup = createElement('div', { className: 'form-group' })
@@ -98,10 +98,9 @@ const createFormGroup = ({
     maxlength,
     name,
     pattern,
-    placeholder,
     required: true,
     type,
-    value: getPreviousFormValue(name),
+    value,
   }
 
   const input = createElement('input', inputAttrs)
